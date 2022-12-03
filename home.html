@@ -4,25 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Cervejaria do Pericles Delivery</title>
     <script>
         function validaEntrada(){
-            const url = new URLSearchParams(window.location.search)
-            let acesso = url.get("acesso")
+        const url = new URLSearchParams(window.location.search)
+        let acesso = url.get("acesso")
+       
 
-            if (acesso == 1){
-                document.getElementById('textoEntrada').innerHTML ="Olá! Gostaria de te dar boas vindas a Cervejaria do Pericles. Aqui você encontrará as melhores bebidas do Brasil!"
-            }else{
-                document.getElementById('textoEntrada').innerHTML= "Sinto muito, mas este site só é permitido para maiores de 18 anos!"
-            }
-        }
+        if(acesso==1){
+            document.getElementById("textoEntrada").innerHTML = "Olá! Gostaria de te dar boas vindas a Cervejaria do Pericles.<br>Aqui você encontrará as melhores bebidas do Brasil";
+            
+        }else{
+            document.getElementById("textoEntrada").innerHTML = "Sinto muito, mas este site só é permitido para maiores de 18 anos! :(";
+            document.getElementById("btnEntrar").style.visibility = "hidden";
+        }        
+    }
     </script>
 </head>
 <body onload="validaEntrada()">
-    <h1 id="textoEntrada"></h1>
+    <nav>
+        <ul>
+            <li><a href="#">A Cervejaria</a></li>
+            <li><a href="#">Nossas Cervejas</a></li>
+            <li><a href="#">Delivery</a></li>
+        </ul>
+        <span class="carrinho">
+            <a href="#">
+                Meu Carrinho 
+                <span class="material-symbols-outlined">
+                shopping_cart
+                </span>
+            </a>
+        </span>
+    </nav>
 
-    
+    <section class="card">
+        <img src="assets/images/image.png" alt="Cervejas" />
+
+        <p id="textoEntrada"></p>
+    </section>
+
+    <button class="entrar" id="btnEntrar">Entrar no Site</button>
     
 </body>
 </html>

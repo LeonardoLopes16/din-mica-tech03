@@ -4,32 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
     <title>Cervejaria do Pericles Delivery</title>
     <script>
         function validaIdade(valor){
-            if (valor === 1){
+            if(valor===1){
                 window.location.href='home.html?acesso=1'
-            } else{
+            }else{
                 window.location.href='home.html?acesso=0'
             }
-
         }
     </script>
-    
 </head>
 <body>
-    <h1>Bem-vindo à <br> Cervejaria do Pericles Delivery</h1>
 
-    <section class="container">
-        <img src="assets/images/image.png" alt="cerveja"/>
-        <p>Você é maior de 18 anos?</p>
-        
-        
-        <button onclick="validaIdade(1)">Sim</button>
-        <button onclick="validaIdade(0)">Não</button>
+    <h1 class="header">
+        Bem-vindo à<br>Cervejaria do Pericles Delivery
+    </h1>
+
+    <section class="card">
+        <img src="assets/images/image.png" alt="Cervejas" />
+
+        <p> Você é maior de 18 anos?</p>
+        <div class="botoes">
+            <button onclick="validaIdade(1)">Sim</button>
+            <button onclick="validaIdade(0)">Não</button>
+        </div>
     </section>
-    
     
 </body>
 </html>
